@@ -1,0 +1,3 @@
+mutation partnerCreateDiscountCode($input: PartnerCreateDiscountCodeInput!) {
+  partnerCreateDiscountCode(input: $input)
+}

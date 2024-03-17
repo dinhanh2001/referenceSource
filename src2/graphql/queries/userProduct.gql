@@ -1,0 +1,95 @@
+query userProduct($id: String!) {
+  userProduct(id: $id) {
+    avatar {
+      ...MediaFragment
+    }
+    createdAt
+    descriptionImages {
+      ...MediaFragment
+    }
+    id
+    isFixedCost
+    isNew
+    isFavorite
+    manufacturer {
+      id
+      name
+    }
+    model {
+      id
+      name
+    }
+    name
+    operatingNumber
+    operatingUnit
+    ordinalNumber
+    origin {
+      id
+      name
+    }
+    partNumber
+    partOfProduct {
+      id
+      name
+    }
+    partner {
+      id
+      fullname
+      phone
+      avatar {
+        ...MediaFragment
+      }
+      qualifications {
+        id
+        name
+      }
+      storeReviewSummary{
+        total
+        starAverage
+        percent
+      }
+    }
+    partnerId
+    productDevices {
+      manufacturer {
+        id
+        name
+      }
+      model {
+        id
+        name
+      }
+      vehicleType {
+        id
+        name
+      }
+    }
+    productType {
+      id
+      name
+    }
+    productUnit {
+      id
+      name
+    }
+    quantity
+    serialNumber
+    type
+    unitPrice
+    updatedAt
+    vehicleRegistrationPlate
+    vinNumber
+    yearOfManufacture
+    detail
+    reviewSummary {
+      total
+      starAverage
+      percent
+    }
+    starInfo {
+      star
+      total
+    }
+    numberOrder
+  }
+}

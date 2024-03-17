@@ -1,0 +1,5 @@
+mutation updateServiceFeedback($input: UpdateServiceFeedbackInput!) {
+  updateServiceFeedback(input: $input) {
+    id
+  }
+}

@@ -1,0 +1,21 @@
+fragment DiscountCodeFragment on DiscountCodeEntity {
+  id
+  name
+  minOrderValue
+  unit
+  limit
+  limitPerAccount
+  minOrderValue
+  startDate
+  endDate
+  isActive
+  isAssignAllProduct
+  deletedAt
+  createdAt
+  updatedAt
+  value
+  products {
+    ...ProductFragment
+  }
+  usedCount
+}

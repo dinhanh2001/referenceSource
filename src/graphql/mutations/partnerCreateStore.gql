@@ -1,0 +1,3 @@
+mutation partnerCreateStore($input: CreateStoreInput!) {
+  partnerCreateStore(input: $input)
+}

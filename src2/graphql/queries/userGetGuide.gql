@@ -1,0 +1,20 @@
+query userGetGuide($id: String!) {
+  userGetGuide(id: $id) {
+    id
+    name
+    description
+    isActive
+    instructions {
+      name
+      files {
+        ...MediaFragment
+      }
+      guide {
+        id
+        name
+        description
+      }
+    }
+    createdAt
+  }
+}

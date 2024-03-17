@@ -1,0 +1,45 @@
+query partnerListReview(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $reviewObject: ReviewObjectEnum!
+  $search: String
+  $sort: SortInput
+  $star: Float
+) {
+  partnerListReview(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    reviewObject: $reviewObject
+    search: $search
+    sort: $sort
+    star: $star
+  ) {
+    items {
+      comment
+      createdAt
+      id
+      star
+      type
+      updatedAt
+      userAssessor {
+        fullname
+        avatar {
+          ...MediaFragment
+        }
+      }
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

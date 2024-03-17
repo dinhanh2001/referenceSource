@@ -1,0 +1,19 @@
+query mePartner($deviceId: String) {
+  mePartner(deviceId: $deviceId) {
+    ...PartnerFragment
+    reviewSummary{
+      starAverage
+      total
+      percent
+    }
+    storeReviewSummary {
+      starAverage
+      total
+      percent
+    }
+    storeStarInfo {
+      star
+      total
+    }
+  }
+}

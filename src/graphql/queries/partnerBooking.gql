@@ -1,0 +1,5 @@
+query partnerBooking($id: String!) {
+  partnerBooking(id: $id) {
+    ...BookingFragment
+  }
+}

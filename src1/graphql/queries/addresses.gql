@@ -1,0 +1,5 @@
+query addresses {
+  addresses {
+    ...AddressFragment
+  }
+}

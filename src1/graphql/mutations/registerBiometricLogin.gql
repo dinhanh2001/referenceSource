@@ -1,0 +1,9 @@
+mutation registerBiometricLogin {
+  registerBiometricLogin {
+    biometricId
+    createdAt
+    id
+    updatedAt
+    userId
+  }
+}

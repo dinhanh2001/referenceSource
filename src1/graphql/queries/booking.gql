@@ -1,0 +1,5 @@
+query booking($id: String!) {
+  booking(id: $id) {
+    ...BookingFragment
+  }
+}

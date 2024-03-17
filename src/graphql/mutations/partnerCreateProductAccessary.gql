@@ -1,0 +1,5 @@
+mutation partnerCreateProductAccessary($input: PartnerCreateAccessaryInput!) {
+  partnerCreateProductAccessary(input: $input) {
+    ...ProductFragment
+  }
+}

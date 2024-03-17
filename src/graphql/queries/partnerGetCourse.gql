@@ -1,0 +1,19 @@
+query partnerGetCourse($id: String!) {
+  partnerGetCourse(id: $id) {
+    address
+    banner {
+      ...MediaFragment
+    }
+    content
+    startDate
+    endDate
+    openDate
+    name
+    price
+    teacher
+    teacherDescription
+    isEnrolled
+    updatedAt
+    createdAt
+  }
+}

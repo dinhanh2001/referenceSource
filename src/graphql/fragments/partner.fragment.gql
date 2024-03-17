@@ -1,0 +1,49 @@
+fragment PartnerFragment on PartnerEntity {
+  addressMoreInfo
+  avatar {
+    ...MediaFragment
+  }
+  avatarId
+  bank
+  birthday
+  cardNumber
+  citizenId
+  description
+  education {
+    id
+    isActive
+    name
+    type
+  }
+  email
+  fullname
+  hotline
+  id
+  isActive
+  isApproved
+  latitude
+  level {
+    id
+    isActive
+    name
+    type
+  }
+  longitude
+  mapAddress
+  phone
+  type
+  star
+  parentId
+  parentInfo {
+    avatar {
+      ...MediaFragment
+    }
+  }
+  qualifications {
+    id
+    isActive
+    name
+    type
+  }
+  menus
+}

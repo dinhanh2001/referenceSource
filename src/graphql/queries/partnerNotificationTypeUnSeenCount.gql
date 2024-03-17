@@ -1,0 +1,6 @@
+query partnerNotificationTypeUnSeenCount {
+  partnerNotificationTypeUnSeenCount {
+    count
+    type
+  }
+}

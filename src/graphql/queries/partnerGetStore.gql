@@ -1,0 +1,15 @@
+query partnerGetStore($id: String!) {
+  partnerGetStore(id: $id) {
+    id
+    avatarId
+    name
+    address
+    phoneNumber
+    email
+    description
+    partnerId
+    avatar {
+      ...MediaFragment
+    }
+  }
+}

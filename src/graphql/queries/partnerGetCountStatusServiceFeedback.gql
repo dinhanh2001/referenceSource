@@ -1,0 +1,6 @@
+query partnerGetCountStatusServiceFeedback {
+  partnerGetCountStatusServiceFeedback {
+    quantity
+    status
+  }
+}

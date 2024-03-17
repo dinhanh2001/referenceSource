@@ -1,0 +1,11 @@
+query partnerGetReportSummary($endDate: String, $partnerId: String!, $periodType: PeriodTypeEnum!, $startDate: String) {
+  partnerGetReportSummary(endDate: $endDate, partnerId: $partnerId, periodType: $periodType, startDate: $startDate) {
+    histories {
+      date
+      revenue
+    }
+    totalRevenue
+    totalRevenueOrder
+    totalRevenueSettlement
+  }
+}

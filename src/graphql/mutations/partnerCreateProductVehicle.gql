@@ -1,0 +1,5 @@
+mutation partnerCreateProductVehicle($input: PartnerCreateProductVehicleInput!) {
+  partnerCreateProductVehicle(input: $input) {
+    ...ProductFragment
+  }
+}

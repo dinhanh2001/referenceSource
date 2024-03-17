@@ -1,0 +1,9 @@
+query getConnectedSocialAccounts {
+  getConnectedSocialAccounts {
+    id
+    socialEmail
+    socialId
+    type
+    userId
+  }
+}

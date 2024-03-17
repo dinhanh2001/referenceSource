@@ -1,0 +1,5 @@
+subscription onBookingTimeout {
+  onBookingTimeout {
+    id
+  }
+}

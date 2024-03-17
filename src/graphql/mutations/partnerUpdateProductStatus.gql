@@ -1,0 +1,6 @@
+mutation partnerUpdateProductStatus($input: UpdateProductStatusInput!) {
+  partnerUpdateProductStatus(input: $input) {
+    id
+    isActive
+  }
+}

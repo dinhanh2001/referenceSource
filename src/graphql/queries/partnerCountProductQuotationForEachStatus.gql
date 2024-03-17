@@ -1,0 +1,6 @@
+query partnerCountProductQuotationForEachStatus {
+  partnerCountProductQuotationForEachStatus {
+    status
+    totalItem
+  }
+}

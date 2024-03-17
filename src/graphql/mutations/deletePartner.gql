@@ -1,0 +1,3 @@
+mutation deletePartner($input: DeletePartnerInput!) {
+  deletePartner(input: $input)
+}

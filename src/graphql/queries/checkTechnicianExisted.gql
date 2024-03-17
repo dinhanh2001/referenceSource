@@ -1,0 +1,3 @@
+query checkTechnicianExisted($citizenId: String, $email: String, $phone: String) {
+  checkTechnicianExisted(citizenId: $citizenId, email: $email, phone: $phone)
+}

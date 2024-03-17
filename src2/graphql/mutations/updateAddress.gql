@@ -1,0 +1,5 @@
+mutation updateAddress($input: UpdateAddressInput!) {
+  updateAddress(input: $input) {
+    ...AddressFragment
+  }
+}

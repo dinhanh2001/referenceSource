@@ -1,0 +1,94 @@
+query maintenance($id: String!) {
+  maintenance(id: $id) {
+    accessories_available {
+      accessoryId
+      createdAt
+      id
+      isAvailable
+      maintenanceId
+    }
+    addressMoreInfo
+    code
+    createdAt
+    deletedAt
+    endDate
+    id
+    isActive
+    maintenanceLevel
+    mapAddress
+    note
+    startDate
+    status
+    statusDetail {
+      createdAt
+      id
+      maintenanceId
+      note
+      reasons {
+        createdAt
+        id
+        maintenanceStatusId
+        name
+        type
+      }
+      status
+      userId
+    }
+    updatedAt
+    userId
+    vehicle {
+      addressMoreInfo
+      avatar {
+        ...MediaFragment
+      }
+      avatarId
+      createdAt
+      deletedAt
+      detail
+      hidden
+      id
+      latitude
+      longitude
+      mapAddress
+      name
+      operatingNumber
+      operatingUnit
+      ordinalNumber
+      serialNumber
+      updatedAt
+      userId
+      vehicleRegistrationPlate
+      vinNumber
+      yearOfManufacture
+    }
+    vehicleId
+    vehicleTypeCategory {
+      createdAt
+      deletedAt
+      id
+      maintenanceAcessories {
+        createdAt
+        deletedAt
+        id
+        name
+        quantity
+        unit
+        updatedAt
+      }
+      maintenanceAcessoryIds
+      operatingNumber
+      updatedAt
+      vehicleType {
+        createdAt
+        deletedAt
+        id
+        isActive
+        name
+        type
+        updatedAt
+      }
+      vehicleTypeId
+    }
+    vehicleTypeCategoryId
+  }
+}

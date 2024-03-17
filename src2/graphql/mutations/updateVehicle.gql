@@ -1,0 +1,5 @@
+mutation updateVehicle($input: UpdateVehicleInput!) {
+  updateVehicle(input: $input) {
+    id
+  }
+}

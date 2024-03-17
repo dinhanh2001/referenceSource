@@ -1,0 +1,26 @@
+query getServiceFeedback($id: String!) {
+  getServiceFeedback(id: $id) {
+    answer
+    content
+    createAt
+    id
+    images {
+      id
+      fullThumbUrl
+      fullOriginalUrl
+      type
+    }
+    imagesAnswer {
+      id
+      fullThumbUrl
+      fullOriginalUrl
+      type
+    }
+    imagesAnswerIds
+    imagesIds
+    status
+    type
+    updateAt
+    userId
+  }
+}

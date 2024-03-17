@@ -1,0 +1,28 @@
+query partnerGetReportDetailOrder(
+  $endDate: String
+  $partnerId: String!
+  $periodType: PeriodTypeEnum!
+  $startDate: String
+) {
+  partnerGetReportDetailOrder(
+    endDate: $endDate
+    partnerId: $partnerId
+    periodType: $periodType
+    startDate: $startDate
+  ) {
+    dailyOrderReport {
+      date
+      revenue
+    }
+    orderDetails {
+      code
+      createdAt
+      id
+      partnerId
+      shippingFee
+      status
+      total
+    }
+    orderTotal
+  }
+}

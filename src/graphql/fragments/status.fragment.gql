@@ -1,0 +1,9 @@
+fragment BookingStatusFragment on BookingStatusEntity {
+  bookingId
+  createdAt
+  id
+  note
+  partnerId
+  status
+  userId
+}

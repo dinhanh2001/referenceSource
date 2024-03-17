@@ -1,0 +1,9 @@
+mutation connectSocialAccount($input: ConnectSocialAccountInput!) {
+  connectSocialAccount(input: $input) {
+    id
+    socialEmail
+    socialId
+    type
+    userId
+  }
+}

@@ -1,0 +1,9 @@
+mutation socialLogin($input: AuthSocialInput!) {
+  socialLogin(input: $input) {
+    accessToken
+    refreshToken
+    user {
+      ...UserFragment
+    }
+  }
+}

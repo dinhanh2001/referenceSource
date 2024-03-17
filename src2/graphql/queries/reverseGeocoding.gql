@@ -1,0 +1,9 @@
+query reverseGeocoding($input: LatLng!) {
+  reverseGeocoding(input: $input) {
+    address
+    lat
+    lng
+    name
+    place_id
+  }
+}

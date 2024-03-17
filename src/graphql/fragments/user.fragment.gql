@@ -1,0 +1,18 @@
+fragment UserFragment on UserEntity {
+  address
+  avatar {
+    fullThumbUrl
+  }
+  avatarId
+  birthday
+  certificate
+  createdAt
+  deletedAt
+  email
+  fullname
+  id
+  isActive
+  phone
+  updatedAt
+  star
+}

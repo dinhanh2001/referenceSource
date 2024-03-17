@@ -1,0 +1,6 @@
+query partnerCountDiscountCode {
+  partnerCountDiscountCode {
+    isActivities
+    totalItem
+  }
+}

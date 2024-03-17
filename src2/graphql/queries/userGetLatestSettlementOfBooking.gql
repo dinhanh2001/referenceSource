@@ -1,0 +1,94 @@
+query userGetLatestSettlementOfBooking($bookingId: String!) {
+  userGetLatestSettlementOfBooking(bookingId: $bookingId) {
+    booking {
+      ...BookingFragment
+    }
+    bookingId
+    createdAt
+    deletedAt
+    id
+    quotation {
+      accessories {
+        available
+        createdAt
+        deletedAt
+        id
+        name
+        quantity
+        quotationId
+        unit
+        unitPrice
+        updatedAt
+      }
+      additionalFees {
+        amount
+        createdAt
+        deletedAt
+        id
+        name
+        quotationId
+        updatedAt
+      }
+      booking {
+        addressMoreInfo
+        code
+        createdAt
+        deletedAt
+        description
+        id
+        latitude
+        longitude
+        mapAddress
+        partnerId
+        problemTexts
+        scheduleReason
+        scheduleTime
+        status
+        technicianId
+        transportDistance
+        transportDuration
+        transportFee
+        updatedAt
+        userId
+        vehicleId
+      }
+      bookingId
+      createdAt
+      deletedAt
+      diagnosisFee
+      diagnosisNote
+      diagnostics {
+        createdAt
+        deletedAt
+        diagnosticCode
+        expense
+        id
+        quotationId
+        updatedAt
+      }
+      estimatedCompleteAt
+      id
+      operatingNumber
+      operatingUnit
+      rejectReasons
+      repairFee
+      status
+      technicianId
+      total
+      transportFee
+      updatedAt
+      userId
+    }
+    quotationId
+    status
+    technicianId
+    total
+    updatedAt
+    userId
+    additionalFees {
+      amount
+      id
+      name
+    }
+  }
+}

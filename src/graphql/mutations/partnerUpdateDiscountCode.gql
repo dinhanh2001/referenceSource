@@ -1,0 +1,5 @@
+mutation partnerUpdateDiscountCode($input: PartnerUpdateDiscountCodeInput!) {
+  partnerUpdateDiscountCode(input: $input) {
+    ...DiscountCodeFragment
+  }
+}

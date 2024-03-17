@@ -1,0 +1,3 @@
+mutation partnerUpdateOrderStatus($input: UpdateOrderInput!) {
+  partnerUpdateOrderStatus(input: $input)
+}

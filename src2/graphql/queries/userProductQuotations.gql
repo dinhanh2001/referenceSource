@@ -1,0 +1,66 @@
+query userProductQuotations(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $partnerId: String
+  $productId: String
+  $search: String
+  $sort: SortInput
+  $status: ProductQuotationStatusEnum
+  $userId: String
+) {
+  userProductQuotations(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    partnerId: $partnerId
+    productId: $productId
+    search: $search
+    sort: $sort
+    status: $status
+    userId: $userId
+  ) {
+    items {
+      createdAt
+      deletedAt
+      detail
+      id
+      partnerId
+      product {
+        avatar {
+          ...MediaFragment
+        }
+        createdAt
+        id
+        isFixedCost
+        isNew
+        name
+        unitPrice
+        partner {
+          id
+          avatar{
+            ...MediaFragment
+          }
+          fullname
+        }
+      }
+      productId
+      quantity
+      response
+      status
+      updatedAt
+      userId
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

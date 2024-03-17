@@ -1,0 +1,3 @@
+mutation partnerCancelOrder($input: CancelOrderInput!) {
+  partnerCancelOrder(input: $input)
+}

@@ -1,0 +1,51 @@
+query partnerBookingQuotations($bookingId: String!) {
+  partnerBookingQuotations(bookingId: $bookingId) {
+    accessories {
+      available
+      createdAt
+      deletedAt
+      id
+      name
+      quantity
+      quotationId
+      unit
+      unitPrice
+      updatedAt
+    }
+    additionalFees {
+      amount
+      createdAt
+      deletedAt
+      id
+      name
+      quotationId
+      updatedAt
+    }
+    bookingId
+    createdAt
+    deletedAt
+    diagnosisFee
+    diagnosisNote
+    diagnostics {
+      createdAt
+      deletedAt
+      diagnosticCode
+      expense
+      id
+      quotationId
+      updatedAt
+    }
+    estimatedCompleteAt
+    id
+    operatingNumber
+    operatingUnit
+    rejectReasons
+    repairFee
+    status
+    technicianId
+    total
+    transportFee
+    updatedAt
+    userId
+  }
+}

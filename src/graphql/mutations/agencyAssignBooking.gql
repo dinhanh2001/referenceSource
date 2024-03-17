@@ -1,0 +1,3 @@
+mutation agencyAssignBooking($input: AssignBookingInput!) {
+  agencyAssignBooking(input: $input)
+}

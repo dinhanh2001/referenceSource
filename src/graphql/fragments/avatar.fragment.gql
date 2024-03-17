@@ -1,0 +1,16 @@
+fragment MediaFragment on Media {
+  createdAt
+  fileSize
+  fullOriginalUrl
+  fullThumbUrl
+  id
+  isDeleted
+  mimeType
+  name
+  originalUrl
+  ownerId
+  thumbUrl
+  type
+  updatedAt
+  videoUrl
+}

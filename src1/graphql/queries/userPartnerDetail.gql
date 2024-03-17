@@ -1,0 +1,5 @@
+query userPartnerDetail($id: String!) {
+  userPartnerDetail(id: $id) {
+    ...PartnerFragment
+  }
+}

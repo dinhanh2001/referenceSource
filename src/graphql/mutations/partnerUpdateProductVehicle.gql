@@ -1,0 +1,5 @@
+mutation partnerUpdateProductVehicle($input: PartnerUpdateProductVehicleInput!) {
+  partnerUpdateProductVehicle(input: $input) {
+    id
+  }
+}

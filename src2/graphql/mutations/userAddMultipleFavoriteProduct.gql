@@ -1,0 +1,3 @@
+mutation userAddMultipleFavoriteProduct($input: UserAddMultiFavoriteProductInput!) {
+  userAddMultipleFavoriteProduct(input: $input)
+}

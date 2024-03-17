@@ -1,0 +1,5 @@
+mutation partnerUpdateMenuConfigs($input: PartnerUpdateMenuConfigsInput!) {
+  partnerUpdateMenuConfigs(input: $input) {
+    id
+  }
+}

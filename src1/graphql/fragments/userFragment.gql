@@ -1,0 +1,37 @@
+fragment UserFragment on UserEntity {
+  address
+  avatar {
+    ...MediaFragment
+  }
+  avatarId
+  birthday
+  certificate
+  createdAt
+  deletedAt
+  email
+  fullname
+  id
+  isActive
+  phone
+  totalBookings
+  totalMaintenanceRequests
+  totalOrders
+  totalSpending
+  updatedAt
+  star
+  userAddress {
+    addressDetail
+    addressName
+    contactName
+    contactPhone
+    createdAt
+    deletedAt
+    id
+    isDefault
+    latitude
+    longitude
+    mapAddress
+    updatedAt
+    userId
+  }
+}

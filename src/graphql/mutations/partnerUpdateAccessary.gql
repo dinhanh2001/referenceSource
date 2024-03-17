@@ -1,0 +1,5 @@
+mutation partnerUpdateAccessary($input: PartnerUpdateAccessaryInput!) {
+  partnerUpdateAccessary(input: $input) {
+    id
+  }
+}

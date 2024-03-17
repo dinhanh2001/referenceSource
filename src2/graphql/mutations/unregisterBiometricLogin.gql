@@ -1,0 +1,3 @@
+mutation unregisterBiometricLogin($biometricId: String!) {
+  unregisterBiometricLogin(biometricId: $biometricId)
+}

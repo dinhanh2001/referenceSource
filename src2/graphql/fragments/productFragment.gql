@@ -1,0 +1,25 @@
+fragment ProductFragment on ProductEntity {
+  avatar {
+    ...MediaFragment
+  }
+  createdAt
+  detail
+  id
+  isFixedCost
+  isNew
+  name
+  operatingNumber
+  operatingUnit
+  ordinalNumber
+  partnerId
+  quantity
+  serialNumber
+  type
+  unitPrice
+  updatedAt
+  reviewSummary {
+    total
+    starAverage
+    percent
+  }
+}

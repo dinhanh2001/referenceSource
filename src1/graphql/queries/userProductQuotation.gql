@@ -1,0 +1,43 @@
+query userProductQuotation($id: String!) {
+  userProductQuotation(id: $id) {
+    createdAt
+    deletedAt
+    detail
+    id
+    medias {
+      ...MediaFragment
+    }
+    partnerId
+    product {
+      avatar {
+        ...MediaFragment
+      }
+      avatarId
+      detail
+      id
+      isActive
+      isFixedCost
+      isNew
+      name
+      operatingNumber
+      operatingUnit
+      ordinalNumber
+      partner {
+        avatar {
+          ...MediaFragment
+        }
+        fullname
+        id
+      }
+      partnerId
+      quantity
+      unitPrice
+    }
+    productId
+    quantity
+    response
+    status
+    updatedAt
+    userId
+  }
+}

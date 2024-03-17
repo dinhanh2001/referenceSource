@@ -1,0 +1,3 @@
+mutation partnerCancelBooking($input: CancelBookingInput!) {
+  partnerCancelBooking(input: $input)
+}

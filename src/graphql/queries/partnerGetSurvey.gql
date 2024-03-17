@@ -1,0 +1,35 @@
+query partnerGetSurvey($id: String!) {
+  partnerGetSurvey(id: $id) {
+    createdAt
+    deletedAt
+    id
+    isActive
+    name
+    partnerIsSubmitSurvey
+    partnerResultSurvey {
+      createdAt
+      deletedAt
+      id
+      results {
+        questionId
+        answer
+      }
+      surveyId
+      type
+      updatedAt
+      userId
+    }
+    questions {
+      answers
+      answerType
+      createdAt
+      deletedAt
+      id
+      isRequired
+      question
+      surveyId
+      updatedAt
+    }
+    updatedAt
+  }
+}

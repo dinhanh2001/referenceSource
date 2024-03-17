@@ -1,0 +1,37 @@
+query myCart {
+  myCart {
+    createdAt
+    id
+    items {
+      cartId
+      createdAt
+      id
+      product {
+        avatar{
+          ...MediaFragment
+        }
+        id
+        isFixedCost
+        isNew
+        name
+        quantity
+        type
+        unitPrice
+      }
+      productId
+      quantity
+      store {
+        avatar{
+          ...MediaFragment
+        }
+        fullname
+        id
+      }
+      total
+      updatedAt
+    }
+    total
+    updatedAt
+    userId
+  }
+}

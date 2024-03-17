@@ -1,0 +1,34 @@
+query partnerGetDocument($id: String!) {
+  partnerGetDocument(id: $id) {
+    createdAt
+    deletedAt
+    fileIds
+    files {
+      ...MediaFragment
+    }
+    id
+    isActive
+    name
+    reference {
+      createdAt
+      deletedAt
+      description
+      documents {
+        createdAt
+        deletedAt
+        fileIds
+        id
+        isActive
+        name
+        referenceId
+        updatedAt
+      }
+      id
+      isActive
+      name
+      updatedAt
+    }
+    referenceId
+    updatedAt
+  }
+}

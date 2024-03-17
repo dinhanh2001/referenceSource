@@ -1,0 +1,3 @@
+mutation agencyDeleteTechnician($input: AgencyDeleteTechnicianInput!) {
+  agencyDeleteTechnician(input: $input)
+}

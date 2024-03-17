@@ -1,0 +1,163 @@
+fragment BookingFragment on BookingEntity {
+  addressMoreInfo
+  code
+  createdAt
+  deletedAt
+  description
+  id
+  latitude
+  longitude
+  mapAddress
+  technicianId
+  transportFee
+  transportDuration
+  transportDistance
+  medias {
+    ...MediaFragment
+  }
+  user {
+    ...UserFragment
+  }
+  partner {
+    addressMoreInfo
+    avatarId
+    avatar {
+      ...MediaFragment
+    }
+    qualifications {
+      id
+      isActive
+      name
+      type
+    }
+    bank
+    birthday
+    cardNumber
+    citizenId
+    createdAt
+    deletedAt
+    description
+    email
+    fullname
+    hotline
+    id
+    isActive
+    isApproved
+    latitude
+    longitude
+    mapAddress
+    parentId
+    phone
+    type
+    updatedAt
+    reviewSummary{
+      starAverage
+      total
+      percent
+    }
+  }
+  technician {
+    addressMoreInfo
+    avatarId
+    avatar {
+      ...MediaFragment
+    }
+    qualifications {
+      id
+      isActive
+      name
+      type
+    }
+    bank
+    birthday
+    cardNumber
+    citizenId
+    createdAt
+    deletedAt
+    description
+    email
+    fullname
+    hotline
+    id
+    isActive
+    isApproved
+    latitude
+    longitude
+    mapAddress
+    parentId
+    phone
+    type
+    updatedAt
+    reviewSummary{
+      starAverage
+      total
+      percent
+    }
+  }
+  partnerId
+  problemTexts
+  problems {
+    createdAt
+    deletedAt
+    id
+    isActive
+    name
+    type
+    updatedAt
+  }
+  status
+  statusDetail {
+    bookingId
+    createdAt
+    id
+    note
+    partnerId
+    reasons {
+      createdAt
+      deletedAt
+      id
+      isActive
+      name
+      type
+      updatedAt
+    }
+    scheduleReason
+    scheduleTime
+    status
+    userId
+  }
+  updatedAt
+  vehicle {
+    addressMoreInfo
+    avatarId
+    createdAt
+    deletedAt
+    detail
+    hidden
+    id
+    latitude
+    longitude
+    mapAddress
+    name
+    operatingNumber
+    operatingUnit
+    ordinalNumber
+    serialNumber
+    updatedAt
+    userId
+    vehicleRegistrationPlate
+    vinNumber
+    yearOfManufacture
+    avatar {
+      ...MediaFragment
+    }
+  }
+  vehicleId
+  scheduleTime
+  scheduleReason
+  userCanReviewTechnician
+  settlementAccepted {
+    id
+    quotationId
+  }
+}

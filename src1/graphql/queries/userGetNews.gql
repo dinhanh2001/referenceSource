@@ -1,0 +1,40 @@
+query userGetNews(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+) {
+  userGetNews(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+  ) {
+    items {
+      createdAt
+      id
+      description
+      isActive
+      media {
+        fullOriginalUrl
+        fullThumbUrl
+        id
+      }
+      mediaId
+      title
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

@@ -1,0 +1,5 @@
+mutation createVehicle($input: CreateVehicleInput!) {
+  createVehicle(input: $input) {
+    id
+  }
+}

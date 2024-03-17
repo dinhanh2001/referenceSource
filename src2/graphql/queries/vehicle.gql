@@ -1,0 +1,43 @@
+query vehicle($id: String!) {
+  vehicle(id: $id) {
+    addressMoreInfo
+    avatar {
+      ...MediaFragment
+    }
+    avatarId
+    createdAt
+    deletedAt
+    detail
+    hidden
+    id
+    latitude
+    longitude
+    manufacturer {
+      id
+      name
+    }
+    mapAddress
+    model {
+      id
+      name
+    }
+    name
+    operatingNumber
+    operatingUnit
+    ordinalNumber
+    origin {
+      id
+      name
+    }
+    serialNumber
+    updatedAt
+    userId
+    vehicleRegistrationPlate
+    vehicleType {
+      id
+      name
+    }
+    vinNumber
+    yearOfManufacture
+  }
+}

@@ -1,0 +1,11 @@
+query userGetInvoice($settlementId: String!) {
+  userGetInvoice(settlementId: $settlementId) {
+    fullOriginalUrl
+    fullThumbUrl
+    id
+    isDeleted
+    originalUrl
+    thumbUrl
+    type
+  }
+}

@@ -1,0 +1,10 @@
+query partnerSummary {
+  partnerSummary {
+    totalBooking
+    totalOrder
+    totalProduct
+    totalRevenue
+    totalReview
+    totalTechnician
+  }
+}

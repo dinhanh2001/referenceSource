@@ -1,0 +1,49 @@
+query userGetDiscountCodes(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $productIds: [String!]!
+  $search: String
+  $sort: SortInput
+) {
+  userGetDiscountCodes(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    productIds: $productIds
+    search: $search
+    sort: $sort
+  ) {
+    items {
+      adminId
+      createdAt
+      endDate
+      id
+      isActive
+      isAssignAllProduct
+      limit
+      limitPerAccount
+      minOrderValue
+      name
+      partnerId
+      products {
+        id
+      }
+      startDate
+      unit
+      updatedAt
+      value
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

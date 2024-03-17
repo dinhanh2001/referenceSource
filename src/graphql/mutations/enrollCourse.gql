@@ -1,0 +1,3 @@
+mutation enrollCourse($id: String!) {
+  enrollCourse(id: $id)
+}

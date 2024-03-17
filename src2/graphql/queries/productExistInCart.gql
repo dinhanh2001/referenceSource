@@ -1,0 +1,11 @@
+query productExistInCart($productId: String!) {
+  productExistInCart(productId: $productId) {
+    cartItem {
+      createdAt
+      id
+      quantity
+      total
+    }
+    exist
+  }
+}

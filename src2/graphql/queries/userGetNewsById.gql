@@ -1,0 +1,16 @@
+query userGetNewsById($id: String!) {
+  userGetNewsById(id: $id) {
+    body
+    createdAt
+    id
+    isActive
+    description
+    media {
+      fullOriginalUrl
+      fullThumbUrl
+      id
+    }
+    mediaId
+    title
+  }
+}

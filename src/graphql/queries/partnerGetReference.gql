@@ -1,0 +1,33 @@
+query partnerGetReference($id: String!) {
+  partnerGetReference(id: $id) {
+    createdAt
+    deletedAt
+    description
+    documents {
+      createdAt
+      deletedAt
+      fileIds
+      files {
+        ...MediaFragment
+      }
+      id
+      isActive
+      name
+      reference {
+        createdAt
+        deletedAt
+        description
+        id
+        isActive
+        name
+        updatedAt
+      }
+      referenceId
+      updatedAt
+    }
+    id
+    isActive
+    name
+    updatedAt
+  }
+}

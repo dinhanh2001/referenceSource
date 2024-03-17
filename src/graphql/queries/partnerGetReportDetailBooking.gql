@@ -1,0 +1,34 @@
+query partnerGetReportDetailBooking(
+  $endDate: String
+  $partnerId: String!
+  $periodType: PeriodTypeEnum!
+  $startDate: String
+) {
+  partnerGetReportDetailBooking(
+    endDate: $endDate
+    partnerId: $partnerId
+    periodType: $periodType
+    startDate: $startDate
+  ) {
+    dailySettlementReport {
+      date
+      revenue
+    }
+    settlementDetails {
+      booking {
+        code
+      }
+      createdAt
+      id
+      invoiceId
+      quotationId
+      status
+      technicianId
+      total
+      user {
+        fullname
+      }
+    }
+    settlementTotal
+  }
+}

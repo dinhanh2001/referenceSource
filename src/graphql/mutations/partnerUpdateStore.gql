@@ -1,0 +1,5 @@
+mutation partnerUpdateStore($input: UpdateStoreInput!) {
+  partnerUpdateStore(input: $input) {
+    id
+  }
+}

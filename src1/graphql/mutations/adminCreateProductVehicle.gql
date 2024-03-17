@@ -1,0 +1,255 @@
+mutation adminCreateProductVehicle($input: CreateProductVehicleInput!) {
+  adminCreateProductVehicle(input: $input) {
+    avatar {
+      createdAt
+      fileSize
+      fullOriginalUrl
+      fullThumbUrl
+      id
+      isDeleted
+      mimeType
+      name
+      originalUrl
+      ownerId
+      thumbUrl
+      type
+      updatedAt
+      videoUrl
+    }
+    avatarId
+    createdAt
+    deletedAt
+    descriptionImageIds
+    descriptionImages {
+      createdAt
+      fileSize
+      fullOriginalUrl
+      fullThumbUrl
+      id
+      isDeleted
+      mimeType
+      name
+      originalUrl
+      ownerId
+      thumbUrl
+      type
+      updatedAt
+      videoUrl
+    }
+    detail
+    id
+    isActive
+    isFixedCost
+    isNew
+    manufacturer {
+      createdAt
+      deletedAt
+      id
+      isActive
+      name
+      type
+      updatedAt
+    }
+    model {
+      createdAt
+      deletedAt
+      id
+      isActive
+      name
+      type
+      updatedAt
+    }
+    name
+    operatingNumber
+    operatingUnit
+    ordinalNumber
+    origin {
+      createdAt
+      deletedAt
+      id
+      isActive
+      name
+      type
+      updatedAt
+    }
+    partNumber
+    partOfProduct {
+      createdAt
+      deletedAt
+      id
+      isActive
+      name
+      type
+      updatedAt
+    }
+    partner {
+      addressMoreInfo
+      avatar {
+        createdAt
+        fileSize
+        fullOriginalUrl
+        fullThumbUrl
+        id
+        isDeleted
+        mimeType
+        name
+        originalUrl
+        ownerId
+        thumbUrl
+        type
+        updatedAt
+        videoUrl
+      }
+      avatarId
+      bank
+      birthday
+      cardNumber
+      citizenId
+      countProduct
+      countTechnician
+      createdAt
+      deletedAt
+      description
+      education {
+        createdAt
+        deletedAt
+        id
+        isActive
+        name
+        type
+        updatedAt
+      }
+      email
+      expenseInfo {
+        cost
+        distance
+        time
+      }
+      fullname
+      hotline
+      id
+      isActive
+      isApproved
+      latitude
+      level {
+        createdAt
+        deletedAt
+        id
+        isActive
+        name
+        type
+        updatedAt
+      }
+      longitude
+      mapAddress
+      parentId
+      parentInfo {
+        addressMoreInfo
+        avatarId
+        bank
+        birthday
+        cardNumber
+        citizenId
+        countProduct
+        countTechnician
+        createdAt
+        deletedAt
+        description
+        email
+        fullname
+        hotline
+        id
+        isActive
+        isApproved
+        latitude
+        longitude
+        mapAddress
+        parentId
+        phone
+        star
+        suggestionPoint
+        type
+        updatedAt
+      }
+      phone
+      qualifications {
+        createdAt
+        deletedAt
+        id
+        isActive
+        name
+        type
+        updatedAt
+      }
+      reviewSummary {
+        percent
+        starAverage
+        total
+      }
+      star
+      starInfo {
+        star
+        total
+      }
+      suggestionPoint
+      type
+      updatedAt
+    }
+    partnerId
+    productDevices {
+      manufacturer {
+        createdAt
+        deletedAt
+        id
+        isActive
+        name
+        type
+        updatedAt
+      }
+      model {
+        createdAt
+        deletedAt
+        id
+        isActive
+        name
+        type
+        updatedAt
+      }
+      vehicleType {
+        createdAt
+        deletedAt
+        id
+        isActive
+        name
+        type
+        updatedAt
+      }
+    }
+    productType {
+      createdAt
+      deletedAt
+      id
+      isActive
+      name
+      type
+      updatedAt
+    }
+    productUnit {
+      createdAt
+      deletedAt
+      id
+      isActive
+      name
+      type
+      updatedAt
+    }
+    quantity
+    serialNumber
+    type
+    unitPrice
+    updatedAt
+    vehicleRegistrationPlate
+    vinNumber
+    yearOfManufacture
+  }
+}

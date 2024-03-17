@@ -1,0 +1,3 @@
+mutation partnerEndDiscount($id: String!) {
+  partnerEndDiscount(id: $id)
+}

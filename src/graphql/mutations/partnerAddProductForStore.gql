@@ -1,0 +1,3 @@
+mutation partnerAddProductForStore($input: CreateStoreProductHistoryInput!) {
+  partnerAddProductForStore(input: $input)
+}

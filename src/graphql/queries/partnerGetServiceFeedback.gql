@@ -1,0 +1,19 @@
+query partnerGetServiceFeedback($id: String!) {
+  partnerGetServiceFeedback(id: $id) {
+    answer
+    content
+    createAt
+    id
+    images {
+      ...MediaFragment
+    }
+    imagesAnswer {
+      ...MediaFragment
+    }
+    imagesAnswerIds
+    imagesIds
+    status
+    type
+    updateAt
+  }
+}

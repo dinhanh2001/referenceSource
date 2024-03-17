@@ -1,0 +1,38 @@
+query partnerGetStoreProduct(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+  $storeId: String!
+) {
+  partnerGetStoreProduct(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+    storeId: $storeId
+  ) {
+    items {
+      id
+      storeId
+      productId
+      product {
+        name
+      }
+      quantity
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

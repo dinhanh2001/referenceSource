@@ -1,0 +1,84 @@
+query partnerProducts(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $partnerId: String!
+  $search: String
+  $sort: SortInput
+  $type: ProductTypeEnum
+) {
+  partnerProducts(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    partnerId: $partnerId
+    search: $search
+    sort: $sort
+    type: $type
+  ) {
+    items {
+      id
+      avatar {
+      ...MediaFragment
+      }
+      descriptionImages{
+        ...MediaFragment
+      }
+      name
+      vehicleRegistrationPlate
+      ordinalNumber
+      productType{
+        id
+      }
+      manufacturer{
+        id
+      }
+      model{
+        id
+      }
+      serialNumber
+      vinNumber
+      origin{
+        id
+      }
+      yearOfManufacture
+      isNew
+      operatingNumber
+      operatingUnit
+      detail
+      isFixedCost
+      unitPrice
+      quantity
+      partNumber
+      productUnit{
+        id
+      }
+      type
+      partOfProduct{
+        id
+      }
+      productDevices{
+        manufacturer{
+          id
+        }
+        model{
+          id
+        }
+        vehicleType{
+          id
+        }
+      }
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

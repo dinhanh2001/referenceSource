@@ -1,0 +1,48 @@
+query partnerGetSurveys(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+) {
+  partnerGetSurveys(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+  ) {
+    items {
+      createdAt
+      deletedAt
+      id
+      isActive
+      name
+      questions {
+        answers
+        answerType
+        createdAt
+        deletedAt
+        id
+        isRequired
+        question
+        surveyId
+        updatedAt
+      }
+      updatedAt
+      partnerIsSubmitSurvey
+      userIsSubmitSurvey
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

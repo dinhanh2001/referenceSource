@@ -1,0 +1,5 @@
+mutation agencyCreateTechnician($input: AgencyCreateTechnicianInput!) {
+  agencyCreateTechnician(input: $input) {
+    ...PartnerFragment
+  }
+}

@@ -1,0 +1,18 @@
+mutation addCartItems($input: CreateCartInput!) {
+  addCartItems(input: $input) {
+    createdAt
+    deletedAt
+    id
+    items {
+      createdAt
+      id
+      productId
+      quantity
+      total
+      updatedAt
+    }
+    total
+    updatedAt
+    userId
+  }
+}

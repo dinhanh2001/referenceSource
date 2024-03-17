@@ -1,0 +1,3 @@
+mutation partnerRespondProductQuotation($input: RespondProductQuotationInput!) {
+  partnerRespondProductQuotation(input: $input)
+}

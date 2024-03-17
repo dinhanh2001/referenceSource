@@ -1,0 +1,5 @@
+query partnerGetDiscountCode($id: String!) {
+  partnerGetDiscountCode(id: $id) {
+    ...DiscountCodeFragment
+  }
+}

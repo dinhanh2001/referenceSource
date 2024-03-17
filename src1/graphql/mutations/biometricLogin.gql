@@ -1,0 +1,9 @@
+mutation biometricLogin($input: BiometricLoginInput!) {
+  biometricLogin(input: $input) {
+    accessToken
+    refreshToken
+    user {
+      ...UserFragment
+    }
+  }
+}

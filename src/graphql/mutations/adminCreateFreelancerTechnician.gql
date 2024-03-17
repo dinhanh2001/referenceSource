@@ -1,0 +1,5 @@
+mutation adminCreateFreelancerTechnician($input: NewFreelancerTechnicianInput!) {
+  adminCreateFreelancerTechnician(input: $input) {
+    ...PartnerFragment
+  }
+}

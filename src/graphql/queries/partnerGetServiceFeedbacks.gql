@@ -1,0 +1,40 @@
+query partnerGetServiceFeedbacks(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+  $status: ServiceFeedbacksStatusEnum
+  $type: ServiceFeedbackTypeEnum
+) {
+  partnerGetServiceFeedbacks(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+    status: $status
+    type: $type
+  ) {
+    items {
+    answer
+    content
+    createAt
+    id
+    status
+    type
+    updateAt
+  }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

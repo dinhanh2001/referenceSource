@@ -1,0 +1,25 @@
+query userGetVehicleTypeCategory($input: UserGetVehicleTypeCategory!) {
+  userGetVehicleTypeCategory(input: $input) {
+    createdAt
+    deletedAt
+    id
+    maintenanceAcessories {
+      id
+      name
+      quantity
+      unit
+    }
+    maintenanceAcessoryIds
+    operatingNumber
+    updatedAt
+    vehicleType {
+      id
+      name
+    }
+    model {
+      id
+      name
+    }
+    vehicleTypeId
+  }
+}

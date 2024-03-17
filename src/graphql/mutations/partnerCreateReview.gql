@@ -1,0 +1,3 @@
+mutation partnerCreateReview($input: CreateReviewInput!) {
+  partnerCreateReview(input: $input)
+}

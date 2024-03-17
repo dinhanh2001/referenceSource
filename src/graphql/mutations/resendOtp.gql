@@ -1,0 +1,3 @@
+mutation resendOtp($input: ResendOtpInput!) {
+  resendOtp(input: $input)
+}

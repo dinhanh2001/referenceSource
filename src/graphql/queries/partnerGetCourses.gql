@@ -1,0 +1,37 @@
+query partnerGetCourses(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $isOwner: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+) {
+  partnerGetCourses(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    isOwner: $isOwner
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+  ) {
+    items {
+      id
+      banner {
+        ...MediaFragment
+      }
+      name
+      price
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

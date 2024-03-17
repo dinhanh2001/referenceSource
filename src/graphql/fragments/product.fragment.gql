@@ -1,0 +1,92 @@
+fragment ProductFragment on ProductEntity {
+  avatar {
+      ...MediaFragment
+    }
+    avatarId
+    createdAt
+    deletedAt
+    descriptionImageIds
+    descriptionImages {
+      createdAt
+      fileSize
+      fullOriginalUrl
+      fullThumbUrl
+      id
+      isDeleted
+      mimeType
+      name
+      originalUrl
+      ownerId
+      thumbUrl
+      type
+      updatedAt
+      videoUrl
+    }
+    detail
+    id
+    isActive
+    isFixedCost
+    isNew
+    manufacturer {
+      createdAt
+      deletedAt
+      id
+      isActive
+      name
+      type
+      updatedAt
+    }
+    model {
+      createdAt
+      deletedAt
+      id
+      isActive
+      name
+      type
+      updatedAt
+    }
+    name
+    operatingNumber
+    operatingUnit
+    ordinalNumber
+    origin {
+      createdAt
+      deletedAt
+      id
+      isActive
+      name
+      type
+      updatedAt
+    }
+    partNumber
+    partner {
+      ...PartnerFragment
+    }
+    partnerId
+    productType {
+      createdAt
+      deletedAt
+      id
+      isActive
+      name
+      type
+      updatedAt
+    }
+    productUnit {
+      createdAt
+      deletedAt
+      id
+      isActive
+      name
+      type
+      updatedAt
+    }
+    quantity
+    serialNumber
+    type
+    unitPrice
+    updatedAt
+    vehicleRegistrationPlate
+    vinNumber
+    yearOfManufacture
+}

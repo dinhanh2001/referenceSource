@@ -1,0 +1,76 @@
+query partnerOrder($id: String!) {
+  partnerOrder(id: $id) {
+    address {
+      addressDetail
+      addressName
+      contactName
+      contactPhone
+      createdAt
+      deletedAt
+      id
+      latitude
+      longitude
+      mapAddress
+      updatedAt
+    }
+    code
+    createdAt
+    deletedAt
+    discount
+    id
+    note
+    product {
+      avatar {
+        ...MediaFragment
+      }
+      avatarId
+      canReviewProduct
+      createdAt
+      deletedAt
+      id
+      isNew
+      name
+      quantity
+      total
+      type
+      unitPrice
+    }
+    shippingFee
+    status
+    statusDetail {
+      id
+      note
+      orderId
+      partnerId
+      reasons {
+        createdAt
+        id
+        name
+        orderStatusId
+        type
+      }
+      status
+      userId
+    }
+    total
+    updatedAt
+    user {
+      address
+      avatar {
+       ...MediaFragment
+      }
+      avatarId
+      email
+      fullname
+      id
+      isActive
+      phone
+      star
+      totalBookings
+      totalMaintenanceRequests
+      totalOrders
+      totalSpending
+    }
+    userId
+  }
+}

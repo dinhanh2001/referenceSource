@@ -1,0 +1,32 @@
+query userGetAgencyTechnicians(
+  $filterTechniciansByAgencyId: String
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+) {
+  userGetAgencyTechnicians(
+    filterTechniciansByAgencyId: $filterTechniciansByAgencyId
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+  ) {
+    items {
+      ...PartnerFragment
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

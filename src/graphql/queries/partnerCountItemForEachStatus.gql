@@ -1,0 +1,6 @@
+query partnerCountItemForEachStatus {
+  partnerCountItemForEachStatus {
+    status
+    totalitems
+  }
+}

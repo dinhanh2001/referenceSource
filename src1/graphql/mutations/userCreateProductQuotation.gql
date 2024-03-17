@@ -1,0 +1,11 @@
+mutation userCreateProductQuotation($input: ProductQuotationInput!) {
+  userCreateProductQuotation(input: $input) {
+    createdAt
+    detail
+    id
+    partnerId
+    productId
+    quantity
+    status
+  }
+}

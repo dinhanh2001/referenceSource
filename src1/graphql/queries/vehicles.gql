@@ -1,0 +1,34 @@
+query vehicles(
+  $excludeActiveBooking: Boolean
+  $excludeActiveMaintenance: Boolean
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+) {
+  vehicles(
+    excludeActiveBooking: $excludeActiveBooking
+    excludeActiveMaintenance: $excludeActiveMaintenance
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+  ) {
+    items {
+      ...VehicleFragment
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

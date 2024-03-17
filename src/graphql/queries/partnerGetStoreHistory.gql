@@ -1,0 +1,41 @@
+query partnerGetStoreHistory(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+  $storeId: String!
+  $type: StoreProductTypeEnum!
+) {
+  partnerGetStoreHistory(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+    storeId: $storeId
+    type: $type
+  ) {
+    items {
+      id
+      storeId
+      productId
+      product {
+        name
+      }
+      quantity
+      inputDate
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

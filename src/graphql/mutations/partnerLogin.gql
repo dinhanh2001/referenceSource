@@ -1,0 +1,23 @@
+mutation partnerLogin($input: PartnerLoginInput!) {
+  partnerLogin(input: $input) {
+    accessToken
+    refreshToken
+    partner {
+      ...PartnerFragment
+      reviewSummary{
+        starAverage
+        total
+        percent
+      }
+      storeReviewSummary {
+        starAverage
+        total
+        percent
+      }
+      storeStarInfo {
+        star
+        total
+      }
+    }
+  }
+}

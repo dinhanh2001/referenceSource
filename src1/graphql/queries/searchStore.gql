@@ -1,0 +1,52 @@
+query searchStore(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $isNew: Boolean
+  $limit: Int
+  $page: Int
+  $search: String!
+  $sort: SortInput
+  $type: ProductTypeEnum
+) {
+  searchStore(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    isNew: $isNew
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+    type: $type
+  ) {
+    items {
+      avatar {
+        ...MediaFragment
+      }
+      fullname
+      id
+      qualifications {
+        createdAt
+        deletedAt
+        id
+        isActive
+        name
+        type
+        updatedAt
+      }
+      storeReviewSummary {
+        percent
+        starAverage
+        total
+      }
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

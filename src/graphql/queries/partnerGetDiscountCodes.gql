@@ -1,0 +1,32 @@
+query partnerGetDiscountCodes(
+  $limit: Int
+  $page: Int
+  $filters: [JSONObject!]
+  $sort: SortInput
+  $search: String
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $isActivities: Boolean!
+) {
+  partnerGetDiscountCodes(
+    limit: $limit
+    page: $page
+    filters: $filters
+    sort: $sort
+    search: $search
+    isActive: $isActive
+    isApproved: $isApproved
+    isActivities: $isActivities
+  ) {
+    items {
+      ...DiscountCodeFragment
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

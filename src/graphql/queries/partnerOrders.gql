@@ -1,0 +1,78 @@
+query partnerOrders(
+  $endDate: String
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+  $startDate: String
+  $statuses: [OrderStatusEnum!]
+) {
+  partnerOrders(
+    endDate: $endDate
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+    startDate: $startDate
+    statuses: $statuses
+  ) {
+    items {
+      code
+      createdAt
+      deletedAt
+      discount
+      id
+      note
+      partnerId
+      product {
+        avatar {
+          ...MediaFragment
+        }
+        canReviewProduct
+        createdAt
+        id
+        isNew
+        name
+        productId
+        quantity
+        total
+        unitPrice
+      }
+      shippingFee
+      status
+      statusDetail {
+        createdAt
+        id
+        note
+        orderId
+        partnerId
+        status
+        userId
+      }
+      total
+      updatedAt
+      user {
+        avatar {
+          ...MediaFragment
+        }
+        fullname
+        id
+        phone
+      }
+      userId
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

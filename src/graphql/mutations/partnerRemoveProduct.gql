@@ -1,0 +1,3 @@
+mutation partnerRemoveProduct($id: String!) {
+  partnerRemoveProduct(id: $id)
+}

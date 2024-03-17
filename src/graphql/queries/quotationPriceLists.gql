@@ -1,0 +1,43 @@
+query quotationPriceLists(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $productName: String
+  $search: String
+  $sort: SortInput
+) {
+  quotationPriceLists(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    productName: $productName
+    search: $search
+    sort: $sort
+  ) {
+    items {
+      accessoriesName
+      createdAt
+      deletedAt
+      diagnosticCode
+      expense
+      fixable
+      id
+      isActive
+      updatedAt
+      vehicleType
+      workingCode
+      workingHour
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

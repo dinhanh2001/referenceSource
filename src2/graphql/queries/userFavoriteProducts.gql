@@ -1,0 +1,43 @@
+query userFavoriteProducts(
+  $filters: [JSONObject!]
+  $isActive: StatusEnum
+  $isApproved: Boolean
+  $limit: Int
+  $page: Int
+  $search: String
+  $sort: SortInput
+) {
+  userFavoriteProducts(
+    filters: $filters
+    isActive: $isActive
+    isApproved: $isApproved
+    limit: $limit
+    page: $page
+    search: $search
+    sort: $sort
+  ) {
+    items {
+      avatar {
+        ...MediaFragment
+      }
+      createdAt
+      deletedAt
+      id
+      isActive
+      isFixedCost
+      isNew
+      name
+      quantity
+      type
+      unitPrice
+      updatedAt
+    }
+    meta {
+      currentPage
+      itemCount
+      itemsPerPage
+      totalItems
+      totalPages
+    }
+  }
+}

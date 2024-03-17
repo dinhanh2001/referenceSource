@@ -1,0 +1,72 @@
+query order($id: String!) {
+  order(id: $id) {
+    address {
+      addressDetail
+      addressName
+      contactName
+      contactPhone
+      createdAt
+      deletedAt
+      id
+      latitude
+      longitude
+      mapAddress
+      updatedAt
+    }
+    code
+    createdAt
+    deletedAt
+    discount
+    id
+    note
+    partner {
+      avatar {
+       ...MediaFragment
+      }
+      fullname
+      id
+      phone
+      qualifications {
+        id
+        name
+      }
+      reviewSummary {
+        percent
+        starAverage
+        total
+      }
+    }
+    partnerId
+    product {
+      avatar {
+        ...MediaFragment
+      }
+      createdAt
+      id
+      productId
+      isNew
+      name
+      orderId
+      quantity
+      unitPrice
+      canReviewProduct
+    }
+    shippingFee
+    status
+    total
+    updatedAt
+    userId
+    userCanReview
+    statusDetail {
+      id
+      partnerId
+      createdAt
+      reasons {
+        name
+        type
+      }
+      note
+      status
+    }
+  }
+}
